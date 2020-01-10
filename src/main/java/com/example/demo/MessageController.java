@@ -36,7 +36,7 @@ public class MessageController {
     @RequestMapping("/detail/{id}")
     public String messagedetailMessage(@PathVariable("id") long id, Model model){
         model.addAttribute("message", messageRepository.findById(id).get());
-        return "messageform";
+        return "messagedetail";
     }
     @RequestMapping("/update/{id}")
     public String updateMessage(@PathVariable("id") long id, Model model){
